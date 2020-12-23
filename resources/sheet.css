@@ -1,0 +1,17 @@
+.desaparece{
+    position:absolute;
+    left: -20000px;
+}
+#seccion2{
+    position:absolute;
+    left:-2500px;
+    transition:left 1s linear;
+}
+#seccion3{
+    position: absolute;
+    left:-2500px;
+    transition:left 1s linear;
+}
+#resultado{
+    opacity: 0;
+}

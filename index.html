@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AgrupaForm</title>
+    <link rel="icon" type="image/png" href="resources/groupIcon.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="resources/sheet.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div id="seccion1">
+            <div class="row justify-content-center">
+                <label for="input-file">Selecciona el ".html"</label>
+            </div>
+            <div class="row justify-content-center">
+                <input type="file" id="input-file">
+            </div>
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                Una vez seleccionado el archivo pulse:
+            </div>
+            <div class="row justify-content-center">
+                <button id="cargar" class="col-3 btn btn-outline-primary">cargar</button>
+            </div>
+        </div>
+        <div class="desaparece">
+            <textarea id="content-target"></textarea>
+            <div id="tabla"></div>
+        </div>
+
+        <br>
+
+        <div id="seccion2">
+            <div class="row justify-content-center">
+                Selecciona las columnas por las que desea agrupar (Por edad, sector, alguna pregunta...)
+                <br>
+                Recuerda que si en el excel aparece en la columna B es el numero 1, la C el 2, D-3...
+                <br>
+                Pon estos números separados por comas (1,2,3):
+            </div>
+            <div class="row justify-content-center">
+                <input id="agrupacion" type="text" ></input>
+                <button id="agrupar" class="btn btn-outline-primary">agrupar</button>
+            </div>
+        </div>
+        
+        <div id="seccion3">
+            <div class="row justify-content-center">
+                Igual que con las agrupaciones, selecciona la columna de la que quiere ver la estadística (solo una, sin comas, se puede ir cambiando):
+            </div>
+            <div class="row justify-content-center">
+            
+            </div>
+            <div class="row justify-content-center">
+                <input id="npregunta" type="text"></input>
+                
+            </div>
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                Selecciona el tipo de pregunta a estudiar:
+                <select id="tipoRespuesta">
+                    <option selected>posibilidad de una única respuesta</option>
+                    <option >posibilidad de multirrespuesta</option>
+                </select>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 10px">
+                <button id="llamarfuncion" class="btn btn-outline-primary">ver estadísticas</button>
+            </div>
+            
+               </div>
+
+        <div id="resultado" style="margin-top: 20px;">
+            <div class="row justify-content-center">
+                <strong><div id="tituloPregunta" ></div></strong>
+            </div>  
+            <div class="row justify-content-center">
+                Elige las agrupaciones:
+            </div>  
+            <div class="row justify-content-center">     
+                <div id="desplegables"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="numTotalesRespuestas" ></div>
+            </div>  
+            <div class="row justify-content-center">
+                <div id="escribeRespuestas" ></div>
+            </div>  
+            <div id="generador"></div>
+        </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="./carga.js"></script>
+        <script src="./cargaAgrupaciones.js"></script>
+        <script src="./dibujaGrafico.js"></script>
+        <script>
+            
+            
+            
+        </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+</html>
