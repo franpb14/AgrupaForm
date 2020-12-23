@@ -46,7 +46,7 @@
                                 estados[it2]=document.getElementById("desplegable"+it2).value
                             }
                         }
-                        if(document.getElementById("tipoRespuesta").value=="posibilidad de una respuesta"){
+                        if(document.getElementById("tipoRespuesta").value=="posibilidad de una única respuesta"){
                             
                             dibujaGrafico(npregunta.value,tablas,estados)
                         }
@@ -59,7 +59,8 @@
                 document.getElementById("llamarfuncion").onclick=()=>{
                     var npregunta=document.getElementById("npregunta").value;
                     let tipoRespuesta = document.getElementById("tipoRespuesta");
-                    if(tipoRespuesta.value=="posibilidad de una respuesta"){
+                    console.log(tipoRespuesta.value)
+                    if(tipoRespuesta.value=="posibilidad de una única respuesta"){
                         dibujaGrafico(npregunta,tablas,estados);
                     } else {
                         dibujaGraficoMultiRespuesta(npregunta,tablas,estados)
