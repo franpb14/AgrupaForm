@@ -21,7 +21,7 @@ function dibujaGrafico(pregunta, tablas, estados){
     document.getElementById("numTotalesRespuestas").innerHTML="<strong>Número total de respuestas: </strong>"+nrespuestas
     nc+1;
     document.getElementById("tituloPregunta").innerText=list[1].getElementsByTagName("td")[pregunta].innerText
-    escribeProbabilidades(porcentajeDeCadaRespuesta, posibilidades);
+    escribeProbabilidades(porcentajeDeCadaRespuesta,cantidadDeCadaRespuesta, posibilidades);
     var ctx = document.getElementById('myChart'+nc).getContext('2d');
     var chart = new Chart(ctx,{
         "type":"pie",
@@ -63,7 +63,7 @@ function dibujaGraficoMultiRespuesta(pregunta, tablas, estados){
     document.getElementById("numTotalesRespuestas").innerHTML="<strong>Número total de respuestas: </strong>"+nrespuestas
     nc+1;
     document.getElementById("tituloPregunta").innerText=list[1].getElementsByTagName("td")[pregunta].innerText
-    escribeProbabilidades(porcentajeDeCadaRespuesta, posibilidades);
+    escribeProbabilidades(porcentajeDeCadaRespuesta,cantidadDeCadaRespuesta, posibilidades);
     var ctx = document.getElementById('myChart'+nc).getContext('2d');
     var chart = new Chart(ctx,{
         "type":"bar",
@@ -81,15 +81,15 @@ function dibujaGraficoMultiRespuesta(pregunta, tablas, estados){
                 }]}});
             
 }
-function escribeProbabilidades(porcentajes, posibilidades){
+function escribeProbabilidades(porcentajes, numeros, posibilidades){
     let escribeRespuestas = document.getElementById("escribeRespuestas");
     escribeRespuestas.innerHTML=""
     for(let i = 0; i<porcentajes.length;i++){
         if(i==porcentajes.length-1){
-            escribeRespuestas.innerHTML+="<span style='color:"+listaColores[i]+"'>"+posibilidades[i]+": "+"<strong>"+porcentajes[i].toFixed(1)+"%</strong> </span>  ";
+            escribeRespuestas.innerHTML+="<span style='color:"+listaColores[i]+"'>"+posibilidades[i]+": "+"<strong>"+porcentajes[i].toFixed(1)+"% ("+numeros[i]+")</strong> </span>  ";
 
         }else {
-            escribeRespuestas.innerHTML+="<span style='color:"+listaColores[i]+"'>"+posibilidades[i]+": "+"<strong>"+porcentajes[i].toFixed(1)+"%</strong> </span> / ";
+            escribeRespuestas.innerHTML+="<span style='color:"+listaColores[i]+"'>"+posibilidades[i]+": "+"<strong>"+porcentajes[i].toFixed(1)+"% ("+numeros[i]+")</strong> </span> / ";
 
         }
     }
