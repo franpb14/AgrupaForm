@@ -1,10 +1,11 @@
 var nc=0;
 var listaColores=["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 160, 5)", "rgb(0, 205, 86)","#FF7F50",
                 "#8B0000","#DA70D6","#4B0082","#8FBC8F","#7FFFD4","#D2691E"]
+var visualizacion = "pie"
 function dibujaGrafico(pregunta, tablas, estados){
     var list = document.getElementsByTagName("tr");
     let nrespuestas =0;
-    let posibilidades=obtenPosibilidadesRespuestas(pregunta);
+    let posibilidades=obtenPosibilidadesRespuestas(pregunta).sort();
     document.getElementById("generador").innerHTML='<canvas style="opacity:1;z-index:9999;" id="myChart'+nc+'"></canvas>'
     let cantidadDeCadaRespuesta = inicializaCantidades(posibilidades);
     for (let i = 3; i < list.length; i++) {
@@ -24,7 +25,7 @@ function dibujaGrafico(pregunta, tablas, estados){
     escribeProbabilidades(porcentajeDeCadaRespuesta,cantidadDeCadaRespuesta, posibilidades);
     var ctx = document.getElementById('myChart'+nc).getContext('2d');
     var chart = new Chart(ctx,{
-        "type":"pie",
+        "type":visualizacion,
         "options":{
             "legend": { "display": false } 
             
@@ -42,7 +43,7 @@ function dibujaGrafico(pregunta, tablas, estados){
 function dibujaGraficoMultiRespuesta(pregunta, tablas, estados){
     var list = document.getElementsByTagName("tr");
     let nrespuestas =0;
-    let posibilidades=obtenPosibilidadesMultiRespuestas(pregunta);
+    let posibilidades=obtenPosibilidadesMultiRespuestas(pregunta).sort();
     document.getElementById("generador").innerHTML='<canvas style="opacity:1;z-index:9999;" id="myChart'+nc+'"></canvas>'
     let cantidadDeCadaRespuesta = inicializaCantidades(posibilidades);
     for (let i = 3; i < list.length; i++) {
@@ -152,4 +153,12 @@ function obtenPosibilidadesMultiRespuestas(pregunta){
             
         }
     return lista;
+}
+document.getElementById("savechanges").onclick=()=>{
+    let colores = document.getElementById("colores").value.split(",")
+    if(colores.length>1){ 
+        listaColores=colores
+    }
+    let visual = document.getElementById("visualizacion")
+    visualizacion = visual.value
 }

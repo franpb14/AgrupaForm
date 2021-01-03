@@ -15,6 +15,7 @@
 
     <div class="container">
         <div id="seccion1">
+            
             <div class="row justify-content-center">
                 <label for="input-file">Selecciona el ".html"</label>
             </div>
@@ -25,16 +26,16 @@
                 Una vez seleccionado el archivo pulse:
             </div>
             <div class="row justify-content-center">
-                <button id="cargar" class="col-3 btn btn-outline-primary">cargar</button>
+                <button id="cargar" class="col-3 btn btn-outline-primary">Cargar</button>
             </div>
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <a href="./tutorial.html">Aquí un tutorial de uso muy detallado.</a>
             </div>
         </div>
         <div class="desaparece">
-            <center><a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+           <!---<center><a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
                 <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=288815"></a><br><a href='http://www.websmultimedia.com/contador-de-visitas-gratis'>Contador de visitas</a><br><a href='http://www.websmultimedia.com/diseno-logotipos'>presupuesto logotipo</a></center>
-            <textarea id="content-target"></textarea>
+             --> <textarea id="content-target"></textarea>
             <div id="tabla"></div>
         </div>
 
@@ -73,12 +74,50 @@
                 </select>
             </div>
             <div class="row justify-content-center" style="margin-top: 10px">
-                <button id="llamarfuncion" class="btn btn-outline-primary">ver estadísticas</button>
+                <button id="llamarfuncion" class="btn btn-outline-primary">Ver estadísticas</button>
+
+                <!-- Button trigger modal -->
+                <input type="image" src="resources/setting.svg" style="width: 30px; margin-left: 10px;"  data-toggle="modal" data-target="#exampleModalCenter">
+                
+        </input>
+            
             </div>
             
                </div>
 
         <div id="resultado" style="margin-top: 20px;">
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ajustes de visualizado</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Si ya has cargado una estadística tienes que volver a pulsar <strong>"Ver estadísticas"</strong><br>
+                        <label for="colores" class="col-form-label">Colores:</label>
+                        <input type="text" class="form-control" id="colores" placeholder='#8FBC8F,#7FFFD4,#D2691E'>
+                        
+                        <span style="color: grey;">*Por defecto vienen cargados diez colores, rellenar esta opción si se quiere usar colores propios, o si hay más de diez opciones</span>
+                        <br>
+                        <label for="visualizacion" class="col-form-label">Visualización:</label>
+                        <select class="form-control" id="visualizacion">
+                            <option selected>pie</option>
+                            <option>bar</option>
+                            <option>doughnut</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" id="savechanges" data-dismiss="modal" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                    </div>
+                </div>
+            </div>    
             <div class="row justify-content-center">
                 <strong><div id="tituloPregunta" ></div></strong>
             </div>  
@@ -94,6 +133,9 @@
             <div class="row justify-content-center">
                 <div id="escribeRespuestas" ></div>
             </div>  
+            
+    
+                
             <div id="generador"></div>
         </div>
     </div>

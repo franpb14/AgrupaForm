@@ -59,7 +59,6 @@
                 document.getElementById("llamarfuncion").onclick=()=>{
                     var npregunta=document.getElementById("npregunta").value;
                     let tipoRespuesta = document.getElementById("tipoRespuesta");
-                    console.log(tipoRespuesta.value)
                     if(tipoRespuesta.value=="posibilidad de una única respuesta"){
                         dibujaGrafico(npregunta,tablas,estados);
                     } else {
