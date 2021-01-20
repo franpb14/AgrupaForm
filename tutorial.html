@@ -12,35 +12,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-        <a href="./index.html">Volver.</a>  <br>  
-        <strong class="col-12">RESULTADO</strong>
-        <img src="resources/tutorial/resultado.png" class="col-12"></img>
-        <strong class="col-12">PASOS<br>1. Descargar el html y seleccionarlo:</strong>
-        <div class="col-10 offset-2">1.1:<img class="col-12" src="resources/tutorial/descargaexcel1.png"> </img></div>
-        <div class="col-10 offset-2">1.2:<img  class="col-12" src="resources/tutorial/descargaexcel2.png"> </img></div>
-        <div class="col-10 offset-2">1.3: guarda el archivo seleccionado en alguna carpeta:<img src="resources/tutorial/descargaexcel3.png"> </img></div>
-        <div class="col-10 offset-2">1.4: pulsa en "seleccionar archivo", seleccionalo y pulsa cargar.</div>
-        <strong class="col-12">2. Selecciona la agrupación:</strong><br>
+    <div style="text-align: justify;" class="container">
+        <nav class="nav justify-content-center">
+          <a  href="./index.html">Volver.</a>  <br> 
+          <a class="offset-6" href="./extras.html">Ver extras y aclaraciones.</a>
+        </nav>
+         <div class="row justify-content-center">
+          <i><strong style="background-color:lightsalmon;font-size:50px" class="col-12">RESULTADO</strong></i></div>
+          <div class="row justify-content-center">
+            <img src="resources/tutorial/resultado.png" class="col-8"></img>
+          </div>
+        <div class="row justify-content-center"><i><strong style="background-color:lightsalmon;font-size:50px" class="col-12">PASOS</strong></i></div>
+        <br>
+        <strong>1. Descargar el html y seleccionarlo:</strong>
+        <div class="col-10 offset-2"><strong>1.1:</strong><img class="col-sm-8 col-12"  src="resources/tutorial/descargaexcel1.png"> </img></div>
+        
+        <div style="margin-top:25px" class="col-10 offset-2"><strong>1.2:</strong><img  class="col-sm-8 col-12" src="resources/tutorial/descargaexcel2.png"> </img></div>
+        
+        <div style="margin-top:25px" class="col-10 offset-2"><strong>1.3:</strong> guarda el archivo seleccionado en cualquier carpeta de tu ordenador, ya sea arrastrándolo o extrayéndolo:
+          <img class="col-sm-12 col-12"  src="resources/tutorial/descargaexcel3.png"> </img></div>
+        
+        <div style="margin-top:25px;margin-bottom:25px;" class="col-10 offset-2"><strong>1.4:</strong> ya de vuelta en <a href="./index.html"> la página principal</a> , pulsa en "seleccionar archivo", selecciona lo que has guardado en tu ordenador y pulsa cargar.</div>
+        <strong style="margin-top:25px" class="col-12">2. Selecciona la agrupación:</strong><br>
         <div class="col-10 offset-2">
-        2.1: Vuelve al excel para saber sobre que columnas agrupar e introducelas poniendo los numeros separados por comas sin espacios --> 1,2,3<br>
-            Esto sirve para ver que han contestado a alguna pregunta por edad por genero 
-            o para ver que han contestado a una pregunta segun lo que han contestado a otra.
-            En el ejemplo si quisiera agrupar en genero y sector pondría 1,3 o si quisiera ver que contestan a la seis los que han dicho No a la cuatro pondría 4
-            <img class="col-12" src="resources/tutorial/agrupa1.png"> </img></div>
-            <div class="col-10 offset-2">
-                2.2: Quedaría como en la siguiente imagen:<img class="col-12" src="resources/tutorial/agrupa2.png"> </img></div>
+        <strong>2.1:</strong> Vuelve al excel para saber sobre qué columnas agrupar e introdúcelas en la página, poniendo los números separados por comas sin espacios --> 1,2,3 (ver la imagen justo abajo para saber que números poner)<br>
+            <br>Esto sirve para ver qué han contestado según edad, género 
+            o para ver qué han contestado a una pregunta según lo que han contestado a otra.
+            <br>En el ejemplo, si quisiera agrupar en edad y sector pondría 1,3. <br><img style="margin-top:25px"  class="col-12" src="resources/tutorial/agrupa1.png"> </img></div>
+            <div style="margin-top:25px" class="col-10 offset-2">
+                <strong>2.2:</strong> Volver a la página, introducir las columnas y pulsar en "agrupar"</div>
             
         <strong class="col-12">3. Selecciona columna a estudiar:</strong><br>
         <div class="col-10 offset-2">
-            3.1En este caso solo debes seleccionar una sin poner comas ni nada, solo el número que corresponda a la pregunta que quieres estudiar.
-            <br>Si las personas encuestadas solo podían seleccionar una deja el tipo como está, si podían seleccionar varias respuestas cambialo a multirrespuesta.
-            <br> Estos parámetros se pueden cambiar y darle a "ver estadísticas" para no tener que hacerlo de nuevo al completo 
+            <strong>3.1:</strong> En este caso solo debes seleccionar una columna sin poner comas, solo el número que corresponda a la pregunta que quieres estudiar.
+            <br><br>Si la pregunta era tipo "casillas" o "cuadrícula de casillas" cambia el tipo de pregunta a estudiar a "posibilidad de multirrespuesta"
+            <br><br> Si quieres cambiar la pregunta a estudiar solo cambia el último número introducido y dale a "ver estadísticas" para no tener que hacerlo de nuevo al completo. 
 
             </div>
-            <div class="col-10 offset-2">
-                3.2: Quedaría como en la imagen. tras esto le das a ver estadísticas y ya lo obtienes.<img class="col-12" src="resources/tutorial/agrup3.png"> </img></div>
+            <div style="margin-top:25px" class="col-10 offset-2">
+              <strong>3.2:</strong> Quedaría como en la imagen. tras esto le das a ver estadísticas y ya lo obtienes, no es necesario pulsar en la rueda para los ajustes, lo que hace se puede ver en <a href="./extras.html">extras.</a>
+              <br><img style="margin-top:25px" class="col-12" src="resources/tutorial/agrup3.png"> </img></div>
+        
+        
         </div>
+      </div>
 
         
 

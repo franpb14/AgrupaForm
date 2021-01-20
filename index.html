@@ -31,11 +31,55 @@
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <a href="./tutorial.html">Aquí un tutorial de uso muy detallado.</a>
             </div>
+            <div class="row justify-content-center" style="margin-top: 25px;">
+                <a href="#dialogosirve" data-toggle="modal" data-target="#dialogosirve">¿Para qué sirve?</a>
+                <div class="modal fade" id="dialogosirve">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content" style="text-align: justify;">
+                  
+                        <!-- cabecera del diálogo -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">¿Para qué sirve?</h4>
+                          <button type="button" class="close" data-dismiss="modal">X</button>
+                        </div>
+                  
+                        <!-- cuerpo del diálogo -->
+                        <div class="modal-body">
+                            Es una aplicación que permite analizar en profundidad los resultados de las encuestas de GoogleForms. Se 
+                            podrá seleccionar <strong>aquellas respuestas</strong> en las que estemos interesados para <strong>combinar y segregar 
+                            sus datos</strong>. <br><br>
+                            Por ejemplo, se podrían segregar los datos por género, edad, destino de preferencia y medio 
+                            de transporte, de tal manera que podremos ver el porcentaje de respuestas de aquellas personas de género 
+                            femenino,
+                            edad entre 18-25 años que quieran viajar por España en avión.
+                            <br><br>
+                            <a href="./tutorial.html">Aquí más detallado el proceso.</a>
+                        </div>
+                  
+                        <!-- pie del diálogo -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+
             <div class="row justify-content-center">
 
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_vdqxTM.json"  background="transparent"  speed="1"  style="width: 100%"  loop autoplay></lottie-player>
-        
+                <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_vdqxTM.json" id="animacion1"  background="transparent"  speed="1"    loop autoplay></lottie-player>
+                
+            </div>
+            
+            <div style="margin-top:25px" class="row justify-content-center">
+                Desarrollado por: <strong style="margin-left: 10px;"> Francisco José Perejón Barrios</strong>
+               
+            </div>
+            <div style="margin-top:25px" class="row justify-content-center">
+               Repositorio en Github: <iframe style="margin-left: 10px;" src="https://ghbtns.com/github-btn.html?user=franpb14&repo=AgrupaForm&type=watch&count=false&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
             </div>
                 </div>
         <div class="desaparece">
@@ -62,7 +106,7 @@
             </div>
             <div class="row justify-content-center">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets6.lottiefiles.com/datafiles/6WfDdm3ooQTEs1L/data.json"  background="transparent"  speed="1"  style="width: 80%;"  loop autoplay></lottie-player>
+                <lottie-player src="https://assets6.lottiefiles.com/datafiles/6WfDdm3ooQTEs1L/data.json" id="animacion2"  background="transparent"  speed="1"    loop autoplay></lottie-player>
             </div>
                
         </div>
@@ -92,14 +136,7 @@
                 <input type="image" src="resources/setting.svg" style="width: 30px; margin-left: 10px;"  data-toggle="modal" data-target="#exampleModalCenter">
                 
                 </input>
-            
-            </div>
-            
-               </div>
-
-        <div id="resultado" style="margin-top: 20px;">
-            
-            <!-- Modal -->
+                <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -129,7 +166,15 @@
                     </div>
                     </div>
                 </div>
-            </div>    
+            </div>  
+            
+            </div>
+            
+               </div>
+
+        <div id="resultado" style="margin-top: 20px;">
+            
+              
             <div class="row justify-content-center">
                 <strong><div id="tituloPregunta" ></div></strong>
             </div>  

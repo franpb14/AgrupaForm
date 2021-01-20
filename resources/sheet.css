@@ -12,6 +12,24 @@
     left:-2500px;
     transition:left 1s linear;
 }
+#animacion1{
+    margin-left:20%;
+    width: 75%;
+}
+#animacion2{
+    margin-left:10%;
+    width: 60%;
+}
 #resultado{
     opacity: 0;
 }
+@media only screen and (max-width: 600px) {
+    #animacion2 {
+      width:100%;
+      margin-left: 0%;
+    }
+    #animacion1{
+        margin-left:0%;
+        width: 100%;
+    }
+  }
