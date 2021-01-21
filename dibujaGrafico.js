@@ -3,7 +3,7 @@ var listaColores=["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 160, 5)", "r
                 "#8B0000","#DA70D6","#4B0082","#8FBC8F","#7FFFD4","#D2691E"]
 var visualizacion = "pie"
 function dibujaGrafico(pregunta, tablas, estados){
-    var list = document.getElementsByTagName("tr");
+    var list = document.getElementById("tabla").getElementsByTagName("tr");
     let nrespuestas =0;
     let posibilidades=obtenPosibilidadesRespuestas(pregunta).sort();
     document.getElementById("generador").innerHTML='<canvas style="opacity:1;z-index:9999;" id="myChart'+nc+'"></canvas>'
@@ -41,7 +41,7 @@ function dibujaGrafico(pregunta, tablas, estados){
             
 }
 function dibujaGraficoMultiRespuesta(pregunta, tablas, estados){
-    var list = document.getElementsByTagName("tr");
+    var list = document.getElementById("tabla").getElementsByTagName("tr");
     let nrespuestas =0;
     let posibilidades=obtenPosibilidadesMultiRespuestas(pregunta).sort();
     document.getElementById("generador").innerHTML='<canvas style="opacity:1;z-index:9999;" id="myChart'+nc+'"></canvas>'
@@ -99,7 +99,9 @@ function escribeProbabilidades(porcentajes, numeros, posibilidades){
 function cumpleEstados(states, tables, tds){
     let boleano=true;
     tables.forEach(e => {
-        
+        if(states[tables.indexOf(e)+1]=="No ha contestado"){
+            states[tables.indexOf(e)+1]=""
+        }
         if((tds[parseInt(e)].innerText==states[tables.indexOf(e)+1] || states[tables.indexOf(e)+1]=="Todos")&&boleano){
             boleano=true;
         }else{
@@ -126,7 +128,7 @@ function calculaPorcentajeTotales(tam, resultado){
 }
 function obtenPosibilidadesRespuestas(pregunta){
     let lista=[]
-    let trs = document.getElementsByTagName("tr");
+    let trs = document.getElementById("tabla").getElementsByTagName("tr");
         for (let index = 3; index < trs.length; index++) {
             let grupo = trs[index].getElementsByTagName("td")[parseInt(pregunta)].innerText;
             if(!lista.includes(grupo)){
@@ -141,7 +143,7 @@ function obtenPosibilidadesRespuestas(pregunta){
 }
 function obtenPosibilidadesMultiRespuestas(pregunta){
     let lista=[]
-    let trs = document.getElementsByTagName("tr");
+    let trs = document.getElementById("tabla").getElementsByTagName("tr");
         for (let index = 3; index < trs.length; index++) {
             let grupo = trs[index].getElementsByTagName("td")[parseInt(pregunta)].innerText;
             let splitearRespuesta = grupo.split(",")
@@ -153,12 +155,4 @@ function obtenPosibilidadesMultiRespuestas(pregunta){
             
         }
     return lista;
-}
-document.getElementById("savechanges").onclick=()=>{
-    let colores = document.getElementById("colores").value.split(",")
-    if(colores.length>1){ 
-        listaColores=colores
-    }
-    let visual = document.getElementById("visualizacion")
-    visualizacion = visual.value
 }

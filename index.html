@@ -41,6 +41,7 @@
                         <div class="modal-header">
                           <h4 class="modal-title">¿Para qué sirve?</h4>
                           <button type="button" class="close" data-dismiss="modal">X</button>
+
                         </div>
                   
                         <!-- cuerpo del diálogo -->
@@ -92,15 +93,13 @@
         <br>
 
         <div id="seccion2">
-            <div class="row justify-content-center">
-                Selecciona las columnas por las que desea agrupar (Por edad, sector, alguna pregunta...)
-                <br>
-                Recuerda que si en el excel aparece en la columna B es el numero 1, la C el 2, D-3...
-                <br>
-                Pon estos números separados por comas (1,2,3):
+            <div class="row justify-content-start">
+                Selecciona las preguntas por las que desea agrupar (puede seleccionar más de una) y selecciona sólo una a estudiar (esto se puede cambiar en el siguiente paso sin necesidad de rehacerlo todo)
+            </div>
+            <div id="eligeColumnas" class="row justfy-content-center">
+
             </div>
             <div class="row justify-content-center">
-                <input id="agrupacion" type="text" ></input>
                 <button id="agrupar" class="btn btn-outline-primary">agrupar</button>
                 
             </div>
@@ -112,25 +111,19 @@
         </div>
         
         <div id="seccion3">
-            <div class="row justify-content-center">
-                Igual que con las agrupaciones, selecciona la columna de la que quiere ver la estadística (solo una, sin comas, se puede ir cambiando):
-            </div>
-            <div class="row justify-content-center">
             
-            </div>
-            <div class="row justify-content-center">
-                <input id="npregunta" type="text"></input>
-                
-            </div>
-            <div class="row justify-content-center" style="margin-top: 20px;">
-                Selecciona el tipo de pregunta a estudiar:
+            <div class="row justify-content-center" >
+                Tipo de pregunta a estudiar:
                 <select id="tipoRespuesta">
                     <option selected>posibilidad de una única respuesta</option>
                     <option >posibilidad de multirrespuesta</option>
                 </select>
             </div>
+            <div style="margin-top: 10px;" class="row justify-content-center">
+                <p style="color: gray;">(selecciona multirrespuesta si la pregunta a estudiar era una pregunta tipo "Casillas" o "Cuadrícula de casillas")</p>
+            </div>
             <div class="row justify-content-center" style="margin-top: 10px">
-                <button id="llamarfuncion" class="btn btn-outline-primary">Ver estadísticas</button>
+                <button id="llamarfuncion"  class="btn btn-outline-primary">Ver estadísticas</button>
 
                 <!-- Button trigger modal -->
                 <input type="image" src="resources/setting.svg" style="width: 30px; margin-left: 10px;"  data-toggle="modal" data-target="#exampleModalCenter">
@@ -173,7 +166,33 @@
                </div>
 
         <div id="resultado" style="margin-top: 20px;">
+            <!-- Button trigger modal -->
+            <div style="margin-bottom: 25px;" class="row justify-content-center">
+            <button  type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalTabla">
+                Cambiar pregunta a estudiar
+            </button>
+            </div>
             
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalTabla" tabindex="-1" role="dialog" aria-labelledby="exampleModalTabla" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cambiar pregunta a estudiar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div id="modalTabla" class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="cambiarNPregunta" type="button" data-dismiss="modal" class="btn btn-primary">Guardar pregunta</button>
+                    </div>
+                </div>
+                </div>
+            </div>
               
             <div class="row justify-content-center">
                 <strong><div id="tituloPregunta" ></div></strong>
