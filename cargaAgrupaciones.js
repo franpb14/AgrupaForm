@@ -110,6 +110,7 @@ var npregunta;
                 cargaTablaModal()
 
             }
+
     function cargaTablaModal(){
         let tabla =`<table class="table"> <thead>
         <tr>
@@ -140,6 +141,15 @@ var npregunta;
                 }
             }
         }
+        
+    }
+document.getElementById("savechanges").onclick=()=>{
+        let colores = document.getElementById("colores").value.split(",")
+        if(colores.length>1){ 
+            listaColores=colores
+        }
+        let visual = document.getElementById("visualizacion")
+        visualizacion = visual.value
         
     }
     
