@@ -7,6 +7,7 @@
     }
 var npregunta;      
     document.getElementById("agrupar").onclick=()=>{
+        document.getElementById("footer").style.opacity=0
         let numDesplegable=1;
         let trs = document.getElementById("tabla").getElementsByTagName("tr");
         radios = document.getElementsByClassName("radios")
@@ -33,7 +34,7 @@ var npregunta;
             if(tablas.length<=2){
                 tamCol= "col-12"
             }  
-                
+            
             desplegables.innerHTML +=`<select id="desplegable${numDesplegable}" class="${tamCol}">
                 ${devuelveOpciones(lista)}</select>`;
                     

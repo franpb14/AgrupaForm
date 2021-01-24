@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="resources/sheet.css">
 
     <!-- Bootstrap CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
-
+  <body >
+<div id="maincontainer" style="background-color: white;" class="container-fluid">
     <div class="container">
         <div id="seccion1">
             
@@ -74,14 +76,7 @@
                 
             </div>
             
-            <div style="margin-top:25px" class="row justify-content-center">
-                Desarrollado por: <strong style="margin-left: 10px;"> Francisco José Perejón Barrios</strong>
-               
-            </div>
-            <div style="margin-top:25px" class="row justify-content-center">
-               Repositorio en Github: <iframe style="margin-left: 10px;" src="https://ghbtns.com/github-btn.html?user=franpb14&repo=AgrupaForm&type=watch&count=false&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-
-            </div>
+            
                 </div>
         <div class="desaparece">
            <center><a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
@@ -114,7 +109,7 @@
             
             <div class="row justify-content-center" >
                 Tipo de pregunta a estudiar:
-                <select id="tipoRespuesta">
+                <select  style="margin-left: 5px;"  id="tipoRespuesta">
                     <option selected>posibilidad de una única respuesta</option>
                     <option >posibilidad de multirrespuesta</option>
                 </select>
@@ -215,17 +210,61 @@
             <div id="generador"></div>
         </div>
     </div>
+</div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script src="./carga.js"></script>
         <script src="./cargaAgrupaciones.js"></script>
         <script src="./dibujaGrafico.js"></script>
+        <div id="footer" class="footer">
+            <div class="max-w-screen-xl mx-auto px-4">
+                <ul class="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
+                    <li class="my-2">
+                        <a style="color: white;" href="./extras.html">
+                            Extras
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <a style="color: white;" href="./tutorial.html">
+                          Tutorial
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <a style="color: white;" href="https://cuestionariotis.tk/respuestas.html">
+                                Trabajo relacionado
+                        </a>
+                    </li>
+                    <li class="my-2">
+                        <a style="color: white;" href="https://github.com/franpb14/AgrupaForm">
+                                Github
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+                <div class="row justify-content-center">
+                    <a style="margin-right: 5%;" href="https://twitter.com/franpb14" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+                    <a style="margin-right: 5%;" href="https://github.com/franpb14" target="_blank" class="btn-social btn-github"><i class="fa fa-github"></i></a>
+                    <a  href="https://www.linkedin.com/in/francisco-josé-perejón-barrios-389b9a204" target="_blank" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <hr style="background-color: grey;">
+                <div  style="color: white;" class="row justify-content-center">
+                    Desarrollada por Francisco José Perejón Barrios
+                </div>
+            </div>
+        </div>
         <script>
+            let maincontainer =document.getElementById("maincontainer")
+            let footer =document.getElementById("footer")
+            maincontainer.style.marginBottom = getComputedStyle(footer).height
+            window.onclick=()=>{
             
+                
+            maincontainer.style.marginBottom = getComputedStyle(footer).height
             
-            
+                
+            }
         </script>
-
 
 
 
