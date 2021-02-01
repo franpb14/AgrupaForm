@@ -17,12 +17,22 @@
 <div id="maincontainer" style="background-color: white;" class="container-fluid">
     <div class="container">
         <div id="seccion1">
-            
             <div class="row justify-content-center">
-                <label for="input-file">Selecciona el ".html"</label>
+                Selecciona el ".html"
             </div>
             <div class="row justify-content-center">
-                <input type="file" id="input-file">
+                <label style="cursor: pointer; " class="btn btn-outline-primary" for="input-file">Seleccionar archivo</label>
+            </div>
+            <div class="row justify-content-center">
+                <div id="Archivo">Ningún archivo seleccionado</div>
+                <input hidden type="file" id="input-file">
+
+                <script>
+                    document.getElementById('input-file').onchange = function () {
+                        document.getElementById("Archivo").innerText= document.getElementById('input-file').files[0].name;
+                    }
+                </script>
+                
             </div>
             <div class="row justify-content-center" style="margin-top: 20px;">
                 Una vez seleccionado el archivo pulse:
@@ -220,7 +230,7 @@
             <div class="max-w-screen-xl mx-auto px-4">
                 <ul class="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
                     <li class="my-2">
-                        <a style="color: white;" href="./extras.html">
+                        <a style="color: white;" href="./extras.html" >
                             Extras
                         </a>
                     </li>
@@ -260,7 +270,7 @@
             window.onclick=()=>{
             
                 
-            maincontainer.style.marginBottom = getComputedStyle(footer).height
+                maincontainer.style.marginBottom = getComputedStyle(footer).height
             
                 
             }
