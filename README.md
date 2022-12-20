@@ -1,5 +1,5 @@
 # AgrupaForm
-:warning: **this code was finished before the end of my career, may contain extracts of hard-to-digest code** :warning:
+:warning: **this code was finished before the end of my degree, may contain extracts of hard-to-digest code** :warning:
 
 
 Esta idea nace de haber hecho para una Asignatura de la Universidad una página sobre [el impacto de la tecnología en el mundo laboral](cuestionariotis.tk/respuestas.html), a raíz de esto hubo gente que me preguntó como hacer esas agrupaciones por lo que decidí hacer eso mismo pero parametrizando para que todos los pudieran construir con unos sencillos pasos.
