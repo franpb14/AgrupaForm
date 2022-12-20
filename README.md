@@ -1,4 +1,7 @@
 # AgrupaForm
+:warning: **this code was finished before the end of my career, may contain extracts of hard-to-digest code** :warning:
+
+
 Esta idea nace de haber hecho para una Asignatura de la Universidad una página sobre [el impacto de la tecnología en el mundo laboral](cuestionariotis.tk/respuestas.html), a raíz de esto hubo gente que me preguntó como hacer esas agrupaciones por lo que decidí hacer eso mismo pero parametrizando para que todos los pudieran construir con unos sencillos pasos.
 ## ¿Para qué sirve?
 Es una aplicación que permite analizar en profundidad los resultados de las encuestas de GoogleForms. Se podrán seleccionar aquellas respuestas en las que estemos interesados para combinar y segregar sus datos.
